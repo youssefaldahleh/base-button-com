@@ -1,17 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <BaseButton></BaseButton>
+  <BaseButton
+    buttonText="elevated"
+    variant="elevated"
+    buttonSize="small"
+    rounded="small"
+  ></BaseButton>
+  <BaseButton buttonText="text" variant="text"> </BaseButton>
+  <BaseButton
+    buttonText="flat"
+    variant="flat"
+    buttonSize="large"
+    rounded="large"
+  >
+  </BaseButton>
+  <BaseButton buttonText="outlined" variant="outlined" color="" bkcolor="white">
+  </BaseButton>
+  <br />
+  <BaseButton>
+    <template #prepend> prependIcon </template>
+    <template #append> appendIcon </template>
+  </BaseButton>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import BaseButton from "./components/Base-Button.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    BaseButton,
+  },
+};
 </script>
 
 <style>
@@ -22,5 +41,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+Button {
+  margin: 20px;
 }
 </style>
